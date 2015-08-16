@@ -1,0 +1,22 @@
+# Template used to create this container: /usr/share/lxc/templates/lxc-debian
+# Parameters passed to the template:
+# For additional config options, please look at lxc.container.conf(5)
+lxc.network.type = veth
+lxc.network.hwaddr = 00:16:3e:db:b0:cb
+lxc.network.flags = up
+lxc.network.link = br0
+lxc.rootfs = /dev/VolGroupArray/test1
+lxc.network.ipv4 = 10.0.0.2/16
+lxc.network.ipv4.gateway = 10.0.0.1
+lxc.network.veth.pair = vethtest1
+lxc.cgroup.memory.limit_in_bytes = 1G
+
+# Common configuration
+lxc.include = /usr/share/lxc/config/debian.common.conf
+
+# Container specific configuration
+lxc.mount = /var/lib/lxc/test1/fstab
+lxc.utsname = test1
+lxc.arch = amd64
+lxc.autodev = 1
+lxc.kmsg = 0
