@@ -17,7 +17,8 @@ setup(
   entry_points={
     'console_scripts': [
       'lxc-info = fakelxc.lxcinfo:main',
-      'lxc-ls = fakelxc.lxcls:main'
+      'lxc-ls = fakelxc.lxcls:main',
+      'lxc-config = fakelxc.lxcconfig:main'
     ]
   },
   data_files=[(sys.prefix + '/var/lib/lxc/test1', ['conf/test1/config']),
